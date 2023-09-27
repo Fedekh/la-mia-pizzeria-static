@@ -15,12 +15,12 @@
             Price = price;
         }
 
-        public string GetPrice(double price)
+        public string GetPrice()
         {
             return this.Price.ToString("0.00");
         }
 
-        public string GetDescription(string description)
+        public string GetDescription()
         {
             return this.Description;
         }

@@ -1,8 +1,33 @@
-﻿@{
-    Layout = null;
-}
+﻿@using la_mia_pizzeria_static.Classes
+@model List<Pizza>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+
+<div class="section my-5">
+
+    <table class="table table-striped align-middle">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Nome</th>
+                <th scope="col">Descrizione</th>
+                <th scope="col">Prezzo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Pizza pizza in Model)
+            {
+                <tr>
+                    <th scope="row">
+                     <img src="@pizza.Photo" width="200">
+                      
+                    </th>
+                    <td>@pizza.Name</td>
+                    <td>@pizza.Description</td>
+                    <td>@pizza.GetPrice() €</td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
 </div>
