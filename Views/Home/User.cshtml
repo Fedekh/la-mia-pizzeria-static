@@ -16,6 +16,9 @@
                                 <h5 class="card-title">@pizza.Name</h5>
                                 <p class="card-text">@pizza.Description</p>
                                 <p class="card-text">@pizza.GetPrice() €</p>
+                                <div class="card-footer">
+                                    <a href="@Url.Action("PizzaDetails", "Home", new { id = pizza.Id })" class="btn btn-primary">Dettagli</a>
+                                </div>
                             </div>
                         </div>
                     </div>
